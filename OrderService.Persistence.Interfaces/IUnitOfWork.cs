@@ -1,8 +1,8 @@
 ﻿using OrderService.Domain.Entities;
 using OrderService.Persistence.Interfaces.Repositories;
 using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace OrderService.Persistence.Interfaces
 {
@@ -13,6 +13,6 @@ namespace OrderService.Persistence.Interfaces
         public IProductCategoryRepository<ProductCategory> ProductCategories { get; set; }
         public IProductRepository<Product> Products { get; set; }
 
-        public void Save();
+        public Task<int> Save(CancellationToken cancellationToken);
     }
 }

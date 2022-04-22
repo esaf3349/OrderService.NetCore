@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace OrderService.Persistence.Interfaces.Common
 {
     public interface ICrudRepository<T> where T : class
     {
-        public IEnumerable<T> Get(int id);
+        public Task<T> Get(int id, CancellationToken cancellationToken);
 
-        public IEnumerable<T> GetRange(int pageNumber, int pageSize);
+        public Task<IEnumerable<T>> GetRange(int pageNumber, int pageSize, CancellationToken cancellationToken);
 
         public int Add(T model);
 
