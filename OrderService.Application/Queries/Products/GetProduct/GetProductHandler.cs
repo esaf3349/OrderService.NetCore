@@ -26,7 +26,7 @@ namespace OrderService.Application.Queries.Products.GetProduct
 
             if (vm == null)
             {
-                throw new NotFound(nameof(Product), request.Id);
+                throw new NotFoundException(nameof(Product), request.Id);
             }
 
             return vm;

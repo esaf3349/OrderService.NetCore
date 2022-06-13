@@ -25,7 +25,7 @@ namespace OrderService.Application.Commands.ProductCategories
 
             if (entity == null)
             {
-                throw new NotFound(nameof(ProductCategory), request.Id);
+                throw new NotFoundException(nameof(ProductCategory), request.Id);
             }
 
             _uow.Products.Delete(entity.Id);

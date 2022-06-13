@@ -25,10 +25,9 @@ namespace OrderService.Application.Commands.Products
 
             if (entity == null)
             {
-                throw new NotFound(nameof(Product), request.Id);
+                throw new NotFoundException(nameof(Product), request.Id);
             }
 
-            entity.Id = request.Id;
             entity.Name = request.Name;
             entity.Description = request.Description;
             entity.CategoryId = request.CategoryId;

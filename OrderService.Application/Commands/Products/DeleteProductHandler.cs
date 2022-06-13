@@ -22,7 +22,7 @@ namespace OrderService.Application.Commands.Products
 
             if (entity == null)
             {
-                throw new NotFound(nameof(Product), request.Id);
+                throw new NotFoundException(nameof(Product), request.Id);
             }
 
             _uow.Products.Delete(entity.Id);

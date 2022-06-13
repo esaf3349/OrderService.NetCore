@@ -22,10 +22,9 @@ namespace OrderService.Application.Commands.ProductCategories
 
             if (entity == null)
             {
-                throw new NotFound(nameof(ProductCategory), request.Id);
+                throw new NotFoundException(nameof(ProductCategory), request.Id);
             }
 
-            entity.Id = request.Id;
             entity.Name = request.Name;
             entity.Description = request.Description;
             entity.Image = request.Image;
