@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService.Persistence.In
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{68678C4D-D901-4424-9804-FBA8439CC332}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.WebApi", "OrderService.WebApi\OrderService.WebApi.csproj", "{7290BFBF-29A1-4392-8FD5-DF55D0C86017}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService.WebApi", "OrderService.WebApi\OrderService.WebApi.csproj", "{7290BFBF-29A1-4392-8FD5-DF55D0C86017}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
